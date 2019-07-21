@@ -17,8 +17,8 @@ def mypage():
 
 
 ## API 역할을 하는 부분
-@app.route('/test', methods=['POST'])
-def test_post():
+@app.route('/receive_order', methods=['POST'])
+def receive_post():
    global orders
    global no
 
@@ -47,7 +47,7 @@ def del_post():
 
 
 
-@app.route('/test', methods=['GET'])
+@app.route('/view_orders', methods=['GET'])
 def test_get():
    global name
    return jsonify({'result': 'success', 'orders': orders})
